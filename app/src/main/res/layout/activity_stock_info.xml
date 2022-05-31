@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".stockinfo.view.StockInfoActivity"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent=".5"
+        app:layout_constraintBottom_toTopOf="@id/imageView"
+        android:contentDescription="LOGO" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="36sp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="48dp"
+        android:id="@+id/symbolTextView"
+        android:textColor="@color/whiteText"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flexWrap="wrap"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:id="@+id/flexBox"
+        android:background="@drawable/rounded_corners_data"
+        app:layout_constraintTop_toBottomOf="@id/symbolTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whiteText"
+            android:layout_margin="4dp"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:background="@drawable/rounded_corners"
+            android:id="@+id/countryTextView"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whiteText"
+            android:textSize="16sp"
+            android:layout_margin="4dp"
+            android:padding="8dp"
+            android:background="@drawable/rounded_corners"
+            android:id="@+id/currentTextView"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whiteText"
+            android:textSize="16sp"
+            android:layout_margin="4dp"
+            android:padding="8dp"
+            android:background="@drawable/rounded_corners"
+            android:id="@+id/industryTextView"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whiteText"
+            android:background="@drawable/rounded_corners"
+            android:textSize="16sp"
+            android:layout_margin="4dp"
+            android:padding="8dp"
+            android:id="@+id/exchangeTextView"/>
+
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColorHint="@color/whiteText"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp"
+        android:id="@+id/button"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/progressBar"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/errorButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:hint="@string/try_again"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

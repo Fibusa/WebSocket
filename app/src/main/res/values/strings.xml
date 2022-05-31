@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WebSocket</string>
+    <string name="search_by">Search by</string>
+    <string name="add_to">Add to favorites</string>
+    <string name="remove_to">Remove from favorites</string>
+    <string name="try_again">Try again</string>
+</resources>
